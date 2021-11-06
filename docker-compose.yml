@@ -1,0 +1,40 @@
+version: "3"
+services:
+  discovery:
+    image: eureka
+    container_name: service-discovery
+    build:
+      context: ./dicovery-server
+      dockerfile: Dockerfile
+    ports:
+      - "9001:9001"
+  gateway:
+    image: gateway
+    container_name: gateway
+    build:
+      context: ./demo
+      dockerfile: Dockerfile
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:9001/eureka/
+    ports:
+      - "9000:9000"
+  auth-service:
+    image: auth-service
+    container_name: auth-service
+    build:
+      context: ./user-auth-service
+      dockerfile: Dockerfile
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:9001/eureka/
+    ports:
+      - "9002:9002"
+  appointement-service:
+    image: appointement-service:latest
+    container_name: appointement-service
+    build:
+      context: ./appointement-service
+      dockerfile: Dockerfile
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:9001/eureka/
+    ports:
+      - "9003:9003"
