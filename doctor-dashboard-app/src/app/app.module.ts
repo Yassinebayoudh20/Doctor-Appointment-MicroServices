@@ -26,6 +26,14 @@ import { UpdateUserComponent } from './home/update-user/update-user.component';
 import { PatientManagementComponent } from './home/patient-management/patient-management.component';
 import { PatientAppoitementComponent } from './home/patient-appoitement/patient-appoitement.component';
 import { DoctorManagementComponent } from './home/doctor-management/doctor-management.component';
+import { ReclamationManagementComponent } from './home/patient-management/reclamation-management/reclamation-management.component';
+import { AjouterreclamationComponent } from './home/ajouterreclamation/ajouterreclamation.component';
+import { GetClaimsManagementComponent } from './home/patient-management/get-claims-management/get-claims-management.component';
+import { GetClaimByPatientManagementComponent } from './home/patient-management/get-claim-by-patient-management/get-claim-by-patient-management.component';
+import { UpdatereclamationComponent } from './home/updatereclamation/updatereclamation.component';
+import { GestionOrdonnanceComponent } from './home/doctor-management/gestion-ordonnance/gestion-ordonnance.component';
+import { GestionSuiviComponent } from './home/doctor-management/gestion-suivi/gestion-suivi.component';
+import { AddSuiviComponent } from './home/doctor-management/gestion-suivi/add-suivi/add-suivi.component';
 
 
 
@@ -41,6 +49,14 @@ import { DoctorManagementComponent } from './home/doctor-management/doctor-manag
     PatientManagementComponent,
     PatientAppoitementComponent,
     DoctorManagementComponent,
+    ReclamationManagementComponent,
+    AjouterreclamationComponent,
+    GetClaimsManagementComponent,
+    GetClaimByPatientManagementComponent,
+    UpdatereclamationComponent,
+    GestionOrdonnanceComponent,
+    GestionSuiviComponent,
+    AddSuiviComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+<form (ngSubmit)="addSuivi()">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="nomPatient">Addresse Local </label>
+        <input type="nomPatient" class="form-control" id="nomPatient" placeholder="Enter  nomPatient ">
+      </div>
+      <div class="form-group">
+        <label for="nbrSeances">Addresse Local </label>
+        <input type="nbrSeances" class="form-control" id="nbrSeances" placeholder="Enter nbrSeances ">
+      </div>
+      <label>choisir Patient:</label>
+      <select class="form-control" [(ngModel)]="nomPatient" formControlName="nomPatient" #product>
+        <option *ngFor="let product of patientList" [value]='product'>{{product.username}}</option>
+</select>
+    
+      <div class="form-group">
+        <label>DateFin :</label>
+          <div class="input-group date" id="dateFin" class="form-control" formControlName="dateFin" data-target-input="nearest">
+              <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate">
+             
+          </div>
+      </div>
+ 
+
+      <div class="form-group">
+        <label>Date Debut:</label>
+          <div class="input-group date" id="dateDebut" class="form-control"  formControlName="dateDebut" data-target-input="nearest">
+              <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate">
+              
+          </div>
+      </div>
+    
+      
+    </div>
+    <!-- /.card-body -->
+
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>

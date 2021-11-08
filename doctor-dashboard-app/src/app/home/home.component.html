@@ -206,6 +206,13 @@
                   <p>Patient Management</p>
                 </a>
               </li>
+              <li class="nav-item">
+                
+                <a [routerLink]="['/dashboard/patient-management/get-claims-management']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Claims Management</p>
+                </a>
+              </li>
 
             </ul>
           </li>
@@ -225,6 +232,12 @@
                   <p>Take Appointement</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a [routerLink]="['/dashboard/patient-management/reclamation-management']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Claim a Doctor</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -241,6 +254,18 @@
                 <a [routerLink]="['/dashboard/doctor-management']" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>See My Patients Appointement</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a [routerLink]="['/dashboard/doctor-management/gestion-ordonnace']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Prescription Mangment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a [routerLink]="['/dashboard/doctor-management/gestion-suivi']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Session Mangment</p>
                 </a>
               </li>
             </ul>

@@ -1,0 +1,20 @@
+<div *ngIf="recl">
+                  <div class="tab-pane" id="settings">
+                    <form [formGroup]="updateForm" (ngSubmit)="updateReclamation(recl._id)">
+                        <div class="card-body">
+                            <div class="form-group">
+                              <label for="type" >Type:</label>
+                              <input type="type" class="form-control" id="type"  formControlName="type" [(ngModel)]="recl.type">
+                            </div>
+                            <div class="form-group">
+                              <label for="description">description</label>
+                              <input type="text" class="form-control" id="description"  formControlName="description" [(ngModel)]="recl.description">
+                            </div>
+                          </div>
+                      <div class="form-group row ">
+                        <div class="offset-sm-2 col-sm-10 ">
+                          <button type="submit" class="btn ">Update claim</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div></div>
